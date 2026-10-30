@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#1DAEEF">
+<title>メンバー紹介｜PLAYFUL LEADERS CHIYODA</title>
+<meta name="description" content="PLAYFUL LEADERS CHIYODA メンバーの好き・強み・伸ばしたいもの">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ブランドカラー（背景画像から抽出） */
+  --blue:#1DAEEF; --coral:#FF5E5B; --teal:#00A19A; --lime:#C5E32B; --orange:#FDB820;
+  --ink:#1F2A33; --muted:#5E6B75; --line:#E6EBEF; --bg:#F6F9FB; --surface:#FFFFFF;
+  --shadow:0 1px 2px rgba(20,40,60,.06),0 6px 20px rgba(20,40,60,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;font-size:16px;line-height:1.8;min-height:100dvh}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.maru{font-family:"Zen Maru Gothic","Zen Kaku Gothic New",sans-serif}
+/* 文節で折り返す（Chrome/Edgeはauto-phrase、他はBudouX） */
+.jp{word-break:auto-phrase}
+budoux-ja{display:inline}
+
+/* ---------- ミニバー（スクロール後に出る） ---------- */
+.minibar{position:fixed;top:0;left:0;right:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding-top:env(safe-area-inset-top);transform:translateY(-110%);transition:transform .3s ease;box-shadow:0 2px 12px rgba(20,40,60,.08)}
+.minibar.show{transform:none}
+.minibar .in{max-width:960px;margin:0 auto;padding:8px 16px;display:flex;align-items:center;justify-content:space-between}
+.minibar img{height:34px;width:auto}
+.minibar span{font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--muted)}
+.stripe{height:4px;background:linear-gradient(90deg,var(--coral) 0 20%,var(--orange) 20% 40%,var(--lime) 40% 60%,var(--blue) 60% 80%,var(--teal) 80% 100%)}
+
+/* ---------- ヒーロー ---------- */
+.hero{position:relative;min-height:min(80svh,700px);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;color:#fff;isolation:isolate;padding:calc(40px + env(safe-area-inset-top)) 16px 72px}
+.hero::before{content:"";position:absolute;inset:-6%;background:url(images/bg_wave.jpg) center/cover;z-index:-2;animation:drift 18s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(120% 70% at 50% 45%,rgba(255,255,255,.0) 40%,rgba(0,40,70,.18) 100%)}
+@keyframes drift{from{transform:scale(1.04) translate(-1.5%,0)}to{transform:scale(1.12) translate(1.5%,-2%)}}
+.logo-card{position:relative;width:min(86vw,440px);background:#fff;border-radius:28px;padding:clamp(22px,6vw,40px) clamp(22px,6vw,44px);box-shadow:0 24px 60px rgba(0,50,90,.28),0 4px 14px rgba(0,50,90,.12);animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.logo-card img{width:100%;height:auto}
+.logo-card::after{content:"";position:absolute;left:28px;right:28px;bottom:-1px;height:6px;border-radius:6px 6px 0 0;background:linear-gradient(90deg,var(--coral) 0 20%,var(--orange) 20% 40%,var(--lime) 40% 60%,var(--blue) 60% 80%,var(--teal) 80% 100%)}
+@keyframes rise{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+.hero .ttl{margin-top:34px;text-align:center;animation:rise .9s .15s cubic-bezier(.2,.8,.2,1) both}
+.hero .eb{display:inline-block;font-size:12px;letter-spacing:.42em;font-weight:900;padding:6px 8px 6px 16px;border:1.5px solid rgba(255,255,255,.9);border-radius:99px;background:rgba(255,255,255,.12);backdrop-filter:blur(4px)}
+.hero h1{font-size:clamp(30px,8.5vw,46px);font-weight:900;line-height:1.25;margin-top:12px;letter-spacing:.06em;text-shadow:0 3px 18px rgba(0,50,90,.35)}
+.hero p{font-size:15px;margin-top:8px;font-weight:700;text-shadow:0 1px 8px rgba(0,50,90,.45)}
+.scroll{position:absolute;bottom:calc(18px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:6px;text-shadow:0 1px 6px rgba(0,50,90,.4)}
+.scroll i{width:1.5px;height:28px;background:linear-gradient(#fff,transparent);animation:sc 1.8s ease-in-out infinite}
+@keyframes sc{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(prefers-reduced-motion:reduce){.hero::before,.logo-card,.hero .ttl,.scroll i{animation:none}}
+
+/* ---------- 一覧 ---------- */
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.count{font-size:13px;color:var(--muted);padding:28px 0 6px;font-weight:700;letter-spacing:.05em}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 12px;padding:8px 0 64px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:28px 20px}}
+.face{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.face .ring{width:100%;aspect-ratio:1;border-radius:50%;padding:4px;background:var(--c);box-shadow:var(--shadow);transition:transform .2s}
+.face .ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid #fff;background:#fff}
+.face:active .ring{transform:scale(.95)}
+@media(hover:hover){.face:hover .ring{transform:translateY(-3px)}}
+.ini{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;border:3px solid #fff;background:#fff;color:var(--c);font-weight:900;font-size:clamp(28px,9vw,52px)}
+.d-face .ini{border-width:4px;font-size:52px}
+.bio{display:grid;gap:4px;margin:12px auto 0;max-width:30em;font-size:13px;line-height:1.65;color:var(--muted);text-align:center}
+.bio span{display:block}
+.bio span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--c);margin-right:6px;vertical-align:.15em}
+.soon-in{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:22px 0 10px;color:var(--muted);font-size:14px}
+.soon-in b{font-size:22px;color:var(--ink)}
+.soon-ic{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-size:22px;color:var(--t);background:color-mix(in srgb,var(--t) 12%,#fff)}
+.soon-tag{font-size:11px;font-weight:700;color:var(--muted);background:#fff;border:1px dashed var(--line);border-radius:99px;padding:1px 10px;margin-top:-4px}
+.face .nm{font-size:16px;font-weight:700;line-height:1.3}
+.face .tap{font-size:11px;color:var(--muted);margin-top:-6px}
+
+/* ---------- 詳細 ---------- */
+.detail{position:fixed;inset:0;background:var(--bg);overflow-y:auto;z-index:10;transform:translateY(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);-webkit-overflow-scrolling:touch}
+.detail.open{transform:none}
+.d-head{position:relative;height:150px;background:url(images/bg_wave.jpg) center/cover}
+.d-head .back{position:absolute;left:12px;top:calc(12px + env(safe-area-inset-top));background:rgba(255,255,255,.92);border-radius:99px;padding:6px 14px;font-size:14px;font-weight:700;box-shadow:var(--shadow)}
+.d-inner{max-width:680px;margin:0 auto;padding:0 16px 80px}
+.d-face{width:128px;height:128px;margin:-70px auto 0;border-radius:50%;padding:4px;background:var(--c);position:relative;box-shadow:var(--shadow)}
+.d-face img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid #fff}
+.d-name{text-align:center;font-size:30px;font-weight:900;margin-top:10px;line-height:1.3}
+.d-catch{text-align:center;font-size:16px;font-weight:700;color:var(--muted);margin:6px auto 0;max-width:22em;line-height:1.7}
+
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:24px 0 16px;position:sticky;top:0;z-index:2;background:var(--bg);padding:10px 0 6px;padding-top:max(10px,env(safe-area-inset-top))}
+.tabs button{border-radius:14px;padding:10px 4px 9px;background:#fff;border:2px solid var(--t);color:var(--t);font-weight:700;font-size:14px;line-height:1.25;display:flex;flex-direction:column;align-items:center;gap:2px}
+.tabs button .ic{font-size:18px;line-height:1}
+.tabs button.on{background:var(--t);color:#fff}
+
+.panel{background:#fff;border-radius:20px;box-shadow:var(--shadow);overflow:hidden;border-top:6px solid var(--t)}
+.panel .pi{padding:20px 18px 22px}
+.panel .lb{font-size:13px;font-weight:700;color:var(--t);letter-spacing:.1em}
+.panel h2{font-size:22px;font-weight:900;line-height:1.55;margin:4px 0 14px}
+.panel ul{list-style:none;display:grid;gap:10px}
+.panel li{position:relative;padding-left:20px;font-size:15.5px;line-height:1.75}
+.panel li::before{content:"";position:absolute;left:2px;top:.62em;width:9px;height:9px;border-radius:50%;background:var(--t)}
+.panel .qt{margin-top:18px;padding:14px 16px;border-radius:14px;background:color-mix(in srgb,var(--t) 10%,#fff);font-weight:700;font-size:16px;line-height:1.75}
+.panel{animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+.note{margin-top:16px;background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:18px 18px 20px;border-left:6px solid var(--orange)}
+.note .lb{font-size:13px;font-weight:700;color:#B37F00;letter-spacing:.1em;margin-bottom:8px}
+.note ul{list-style:none;display:grid;gap:8px}
+.note li{position:relative;padding-left:20px;font-size:15px;line-height:1.75}
+.note li::before{content:"";position:absolute;left:2px;top:.62em;width:9px;height:9px;border-radius:50%;background:var(--orange)}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin:22px 0 0}
+.kw span{font-size:13px;font-weight:500;padding:4px 12px;border-radius:99px;background:#fff;border:1.5px solid var(--line)}
+.kw span:nth-child(5n+1){border-color:var(--coral)}
+.kw span:nth-child(5n+2){border-color:var(--orange)}
+.kw span:nth-child(5n+3){border-color:var(--lime)}
+.kw span:nth-child(5n+4){border-color:var(--blue)}
+.kw span:nth-child(5n+5){border-color:var(--teal)}
+
+.h3{font-size:15px;font-weight:700;margin:32px 0 10px;display:flex;align-items:center;gap:8px}
+.h3::before{content:"";width:6px;height:18px;border-radius:3px;background:var(--blue)}
+.imgbtn{display:block;width:100%;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);position:relative;background:#fff}
+.imgbtn img{width:100%;height:auto}
+.imgbtn .zoom{position:absolute;right:10px;bottom:10px;background:rgba(31,42,51,.7);color:#fff;font-size:12px;padding:5px 11px;border-radius:99px}
+
+.nav2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:32px}
+.nav2 button{padding:14px;border-radius:14px;background:#fff;box-shadow:var(--shadow);font-size:14px;font-weight:700}
+.nav2 button[disabled]{opacity:.35;cursor:default}
+
+/* ---------- 画像拡大 ---------- */
+.lightbox{position:fixed;inset:0;background:#0b151d;z-index:20;display:none;overflow:auto}
+.lightbox.open{display:grid}
+.lightbox img{width:100%;max-width:1280px;margin:auto;height:auto}
+.lightbox.big img{width:200%;max-width:none}
+.lightbox.wide.big img{width:320%}
+.lightbox .x{position:fixed;top:max(12px,env(safe-area-inset-top));right:12px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:22px;line-height:42px;text-align:center}
+.lightbox .hint{position:fixed;bottom:max(14px,env(safe-area-inset-bottom));left:0;right:0;text-align:center;color:rgba(255,255,255,.75);font-size:12px;pointer-events:none}
+body.lock{overflow:hidden}
+footer{text-align:center;font-size:12px;color:var(--muted);padding:0 16px 32px}
+</style>
+</head>
+<body>
+
+<header class="minibar" id="minibar">
+  <div class="in"><img src="images/logo.png" alt="PLAYFUL LEADERS CHIYODA"><span>MEMBERS</span></div>
+  <div class="stripe"></div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="logo-card"><img src="images/logo.png" alt="PLAYFUL LEADERS CHIYODA"></div>
+  <div class="ttl">
+    <div class="eb">MEMBERS</div>
+    <h1 class="maru">メンバー紹介</h1>
+  </div>
+  <div class="scroll">SCROLL<i></i></div>
+</section>
+
+<main class="wrap">
+  <div class="count" id="count"></div>
+  <section class="grid" id="grid"></section>
+</main>
+<footer>PLAYFUL LEADERS CHIYODA</footer>
+
+<article class="detail" id="detail" aria-hidden="true"></article>
+
+<div class="lightbox" id="lb">
+  <img id="lbImg" alt="">
+  <button class="x" id="lbClose" aria-label="閉じる">×</button>
+  <div class="hint">画像をタップで拡大／縮小</div>
+</div>
+
+<script src="lib/budoux-ja.min.js"></script>
+<script src="members.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const jp = s => `<budoux-ja>${esc(s)}</budoux-ja>`;   // 文節で折り返す
+
+// 顔写真がない人は、名前の頭文字アイコンにする
+const avatar = m => m.face
+  ? `<img src="${esc(m.face)}" alt="${esc(m.name)}">`
+  : `<span class="ini maru" aria-label="${esc(m.name)}">${esc([...m.name][0])}</span>`;
+// 五十音順に並べる（カタカナはひらがなとして比較。読みが違う場合は members.js に kana を書く）
+const toHira = t => t.replace(/[\u30a1-\u30f6]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
+MEMBERS.sort((a, b) => toHira(a.kana || a.name).localeCompare(toHira(b.kana || b.name), "ja"));
+const RING = ["var(--coral)","var(--blue)","var(--orange)","var(--teal)","var(--lime)"];
+const TABS = [
+  {label:"好き",       sub:"好きなモノ",     ic:"♥", color:"var(--coral)"},
+  {label:"強み",       sub:"強み",           ic:"★", color:"var(--blue)"},
+  {label:"伸ばしたい", sub:"伸ばしたいもの", ic:"↗", color:"var(--teal)"},
+];
+
+// ---- 一覧 ----
+$("#count").textContent = `${MEMBERS.length}人のメンバー`;
+$("#grid").innerHTML = MEMBERS.map((m,i) => `
+  <button class="face" style="--c:${RING[i%RING.length]}" data-id="${esc(m.id)}">
+    <span class="ring">${avatar(m)}</span>
+    <span class="nm maru">${esc(m.name)}</span>${m.sections?.length ? "" : `<span class="soon-tag">準備中</span>`}
+  </button>`).join("");
+$("#grid").addEventListener("click", e => {
+  const b = e.target.closest(".face"); if (b) location.hash = b.dataset.id;
+});
+
+// ミニバー：ヒーローが見えなくなったら表示
+new IntersectionObserver(([e]) => $("#minibar").classList.toggle("show", !e.isIntersecting), {threshold:0.15}).observe($("#hero"));
+
+// ---- 詳細 ----
+let cur = null, tab = 0;
+function panelHTML(m, j){
+  const s = m.sections[j] || {}, t = TABS[j];
+  if (!s.title) return `<div class="panel soon" style="--t:${t.color}"><div class="pi">
+    <div class="lb">${t.ic} ${esc(t.sub)}</div>
+    <div class="soon-in"><span class="soon-ic">✎</span><b class="maru">準備中</b><span>紹介文はただいま準備中です。お楽しみに！</span></div>
+  </div></div>`;
+  return `<div class="panel" style="--t:${t.color}"><div class="pi">
+    <div class="lb">${t.ic} ${esc(t.sub)}</div>
+    <h2 class="maru jp">${jp(s.title)}</h2>
+    <ul>${(s.points||[]).map(p=>`<li class="jp">${jp(p)}</li>`).join("")}</ul>
+    ${s.quote ? `<div class="qt maru jp">${jp(s.quote)}</div>` : ""}
+  </div></div>`;
+}
+function setTab(j){
+  tab = j;
+  document.querySelectorAll(".tabs button").forEach((b,k)=>b.classList.toggle("on",k===j));
+  $("#panel").innerHTML = panelHTML(cur, j);
+}
+function renderDetail(m){
+  cur = m; tab = 0;
+  const i = MEMBERS.indexOf(m), prev = MEMBERS[i-1], next = MEMBERS[i+1];
+  const d = $("#detail");
+  d.style.setProperty("--c", RING[i%RING.length]);
+  d.innerHTML = `
+    <div class="d-head"><button class="back" id="back">‹ 一覧へ</button></div>
+    <div class="d-inner">
+      <div class="d-face">${avatar(m)}</div>
+      <div class="d-name maru">${esc(m.name)}</div>
+      ${m.catch ? `<div class="d-catch maru jp">${jp(m.catch)}</div>` : `<div class="d-catch maru">プロフィール準備中</div>`}
+      ${m.bio?.length ? `<div class="bio">${m.bio.map(b=>`<span class="jp">${jp(b)}</span>`).join("")}</div>` : ""}
+      <nav class="tabs">${TABS.map((t,j)=>`
+        <button style="--t:${t.color}" data-j="${j}"><span class="ic">${t.ic}</span>${esc(t.label)}</button>`).join("")}
+      </nav>
+      <div id="panel"></div>
+      ${m.interview?.length ? `<div class="note"><div class="lb">💬 ${esc(m.interviewLabel || "インタビューして")}</div><ul>${m.interview.map(x=>`<li class="jp">${jp(x)}</li>`).join("")}</ul></div>` : ""}
+      ${m.keywords?.length ? `<div class="kw">${m.keywords.map(k=>`<span>${esc(k)}</span>`).join("")}</div>` : ""}
+      ${m.image ? `<div class="h3 maru">プロフィール画像</div>
+      <button class="imgbtn" id="openImg"><img src="${esc(m.image)}" alt="${esc(m.name)}のプロフィール画像"><span class="zoom">タップで拡大</span></button>` : ""}
+      <div class="nav2">
+        <button ${prev?`data-go="${esc(prev.id)}"`:"disabled"}>‹ ${prev?esc(prev.name):"前へ"}</button>
+        <button ${next?`data-go="${esc(next.id)}"`:"disabled"}>${next?esc(next.name):"次へ"} ›</button>
+      </div>
+    </div>`;
+  d.scrollTop = 0;
+  setTab(0);
+  $("#back").onclick = () => { location.hash = ""; };
+  const ob = $("#openImg"); if (ob) ob.onclick = () => openLB(m.image);
+  d.querySelectorAll(".tabs button").forEach(b => b.onclick = () => setTab(+b.dataset.j));
+  d.querySelectorAll("[data-go]").forEach(b => b.onclick = () => location.hash = b.dataset.go);
+}
+function route(){
+  const id = decodeURIComponent(location.hash.slice(1));
+  const m = MEMBERS.find(x => x.id === id), d = $("#detail");
+  if (m){ renderDetail(m); d.classList.add("open"); d.setAttribute("aria-hidden","false"); document.body.classList.add("lock"); document.title = `${m.name}｜PLAYFUL LEADERS CHIYODA`; }
+  else { d.classList.remove("open"); d.setAttribute("aria-hidden","true"); document.body.classList.remove("lock"); document.title = "メンバー紹介｜PLAYFUL LEADERS CHIYODA"; }
+}
+window.addEventListener("hashchange", route); route();
+
+// ---- 画像拡大 ----
+const lb = $("#lb");
+function openLB(src){
+  const im = $("#lbImg"); lb.classList.remove("big","wide");
+  im.onload = () => lb.classList.toggle("wide", im.naturalWidth > im.naturalHeight * 1.2);
+  im.src = src; lb.classList.add("open");
+}
+$("#lbImg").onclick = e => {
+  const big = lb.classList.toggle("big");
+  if (big) { const r = e.target.getBoundingClientRect(); requestAnimationFrame(() => requestAnimationFrame(() => {
+    const k = e.target.getBoundingClientRect().width / r.width;
+    lb.scrollLeft = (e.clientX - r.left) * k - innerWidth / 2;
+    lb.scrollTop  = (e.clientY - r.top) * k - innerHeight / 2 + lb.scrollTop;
+  })); }
+};
+$("#lbClose").onclick = () => lb.classList.remove("open");
+document.addEventListener("keydown", e => {
+  if (e.key !== "Escape") return;
+  if (lb.classList.contains("open")) lb.classList.remove("open"); else if (location.hash) location.hash = "";
+});
+</script>
+</body>
+</html>
